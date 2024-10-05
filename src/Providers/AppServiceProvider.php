@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request): void
     {
-        $this->app->bind(Telegram::class, function() {
-            return new Factory();
+        $this->app->singleton('telegram', function() {
+            return new \andrewlevvv23\oxTechTelegram\Telegram\Factory();
         });
 
         $this->app->bind(Webhook::class, function () use ($request) {
