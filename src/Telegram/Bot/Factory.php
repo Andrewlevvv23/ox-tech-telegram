@@ -1,6 +1,6 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Telegram\Factory;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Bot\Factory;
 
 use Exception;
 

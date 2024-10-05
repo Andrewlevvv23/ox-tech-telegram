@@ -3,7 +3,7 @@
 namespace andrewlevvv23\oxTechTelegram\Providers;
 
 use andrewlevvv23\oxTechTelegram\Facades\Telegram;
-use andrewlevvv23\oxTechTelegram\Bot\Factory;
+use andrewlevvv23\oxTechTelegram\Telegram\Bot\Factory;
 use andrewlevvv23\oxTechTelegram\Webhook\Webhook;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request): void
     {
-        $this->app->singleton('telegram', function() {
-            return new \andrewlevvv23\oxTechTelegram\Telegram\Factory();
+        $this->app->bind('telegram', function() {
+            return new Factory();
         });
 
         $this->app->bind(Webhook::class, function () use ($request) {
