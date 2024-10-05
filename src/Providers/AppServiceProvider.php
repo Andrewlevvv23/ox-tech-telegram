@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace andrewlevvv23\oxTechTelegram\Providers;
 
 use App\Facades\Telegram;
 use App\Telegram\Bot\Factory;
