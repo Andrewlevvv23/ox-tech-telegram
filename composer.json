@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "andrewlevvv23\\ox-tech-telegram\\": "src/"
+            "andrewlevvv23\\oxTechTelegram\\": "src/"
         }
     },
     "require": {
