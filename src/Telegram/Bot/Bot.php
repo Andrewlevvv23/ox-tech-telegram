@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Telegram\Bot;
-
+namespace andrewlevvv23\oxTechTelegram\Bot;
 use Illuminate\Support\Facades\Http;
 
 abstract class Bot

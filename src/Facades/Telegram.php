@@ -2,9 +2,9 @@
 
 namespace andrewlevvv23\oxTechTelegram\Facades;
 
-use App\Telegram\Bot\Bot;
-use App\Telegram\Bot\File;
-use App\Telegram\Bot\Message;
+use andrewlevvv23\oxTechTelegram\Bot\Bot;
+use andrewlevvv23\oxTechTelegram\Bot\File;
+use andrewlevvv23\oxTechTelegram\Bot\Message;
 use Illuminate\Support\Facades\Facade;
 
 /**

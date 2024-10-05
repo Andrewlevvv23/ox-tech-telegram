@@ -3,8 +3,8 @@
 namespace andrewlevvv23\oxTechTelegram\Providers;
 
 use andrewlevvv23\oxTechTelegram\Facades\Telegram;
-use andrewlevvv23\oxTechTelegram\Telegram\Bot\Factory;
-use andrewlevvv23\oxTechTelegram\Telegram\Webhook\Webhook;
+use andrewlevvv23\oxTechTelegram\Bot\Factory;
+use andrewlevvv23\oxTechTelegram\Webhook\Webhook;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 
