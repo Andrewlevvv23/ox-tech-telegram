@@ -1,6 +1,6 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Telegram\Message;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Bot;
 
 class Message extends Bot
 {

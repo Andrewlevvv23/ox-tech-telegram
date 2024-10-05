@@ -1,6 +1,6 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Telegram\File;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Bot;
 
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
