@@ -27,6 +27,7 @@ class Telegram extends Facade
      */
      protected static function getFacadeAccessor(): string
      {
-         return Telegram::class;
+         return 'andrewlevvv23\oxTechTelegram\Bot\Bot';
+         //return Telegram::class;
      }
 }
