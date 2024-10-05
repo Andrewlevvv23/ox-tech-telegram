@@ -2,9 +2,9 @@
 
 namespace andrewlevvv23\oxTechTelegram\Providers;
 
-use App\Facades\Telegram;
-use App\Telegram\Bot\Factory;
-use App\Telegram\Webhook\Webhook;
+use andrewlevvv23\oxTechTelegram\Facades\Telegram;
+use andrewlevvv23\oxTechTelegram\Telegram\Bot\Factory;
+use andrewlevvv23\oxTechTelegram\Telegram\Webhook\Webhook;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 
