@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Facades;
+namespace andrewlevvv23\oxTechTelegram\Facades;
 
 use App\Telegram\Bot\Bot;
 use App\Telegram\Bot\File;

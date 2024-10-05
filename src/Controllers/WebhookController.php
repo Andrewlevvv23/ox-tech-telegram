@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace andrewlevvv23\oxTechTelegram\Controllers;
 
 use App\Telegram\Webhook\ActionsHandler;
 use Exception;
