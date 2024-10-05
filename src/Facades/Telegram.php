@@ -27,6 +27,6 @@ class Telegram extends Facade
      */
      protected static function getFacadeAccessor(): string
      {
-         return 'telegram';
+         return Telegram::class;
      }
 }
