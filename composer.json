@@ -1,0 +1,34 @@
+{
+    "name": "andrewlevvv23/ox-tech-telegram",
+    "description": "A laravel facade to interact with Telegram Bots",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Garfield",
+            "email": "garfield@oxtech.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "andrewlevvv23\\ox-tech-telegram\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.37 | ^9.0 | ^10.0",
+        "illuminate/contracts": "^8.37 | ^9.0 | ^10.0",
+        "illuminate/http": "^8.37 | ^9.0 | ^10.00",
+        "spatie/laravel-package-tools": "^1.12.1"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
