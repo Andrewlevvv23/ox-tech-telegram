@@ -6,11 +6,7 @@
 **OX Tech Telegram** is a Laravel package for fluently interacting with Telegram Bots made by OX-Technology
 
 ```php
-Telegraph::message('hello world')
-    ->keyboard(Keyboard::make()->buttons([
-            Button::make('Delete')->action('delete')->param('id', '42'),
-            Button::make('open')->url('https://test.it'),
-    ]))->send();
+Telegram::message($shat_id, 'This is great packages!')->send();
 ```
 
 ## Installation
@@ -21,33 +17,20 @@ You can install the package via composer:
 composer require andrewlevvv23/ox-tech-telegram
 ```
 
-Publish and launch required migrations:
+Next, publish the configuration file telegram.php, and specify bot_token and chat_id in it.
 
 ```bash
-php artisan vendor:publish --tag="telegram-migrations"
+php artisan ox-tech-telegram:publish-config  
+or 
+php artisan vendor:publish --tag=config     
 ```
 
-```bash
-php artisan migrate
-```
-
-Optionally, you can publish the config and translation file with:
-```bash
-php artisan vendor:publish --tag="telegram-config"
-```
-```bash
-php artisan vendor:publish --tag="telegram-translations"
-```
-
-## Usage & Documentation
+## Usage & The source of the package
 
 After a new bot is created and added to a chat/group/channel (as described [in our documentation](https://github.com/Andrewlevvv23/ox-tech-telegram)),
 the `Telegram` facade can be used to easily send messages and interact with it:
 
-```php
-Telegram::message('this is great')->send();
-```
-
 An extensive documentation is available at
 
 https://github.com/Andrewlevvv23/ox-tech-telegram
+
