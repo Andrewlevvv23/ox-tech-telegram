@@ -29,6 +29,16 @@
             "phpstan/extension-installer": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "andrewlevvv23\\oxTechTelegram\\Providers\\AppServiceProvider"
+            ],
+            "aliases": {
+                "Telegram": "andrewlevvv23\\oxTechTelegram\\Facades\\Telegram"
+            }
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

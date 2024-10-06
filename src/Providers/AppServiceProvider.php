@@ -15,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //-
+        $this->mergeConfigFrom(__DIR__.'/../../../config/ox-tech-telegram.php', 'ox-tech-telegram');
+
+        $this->app->singleton('telegram', function ($app) {
+            return new Factory();
+        });
     }
 
     /**
@@ -30,5 +34,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(Webhook::class, function () use ($request) {
             return new Webhook($request, new Telegram());
         });
+
+        $this->publishes([
+            __DIR__.'/../../config/ox-tech-telegram.php' => config_path('ox-tech-telegram.php'),
+        ], 'ox-tech-telegram-config');
+
+        $this->loadRoutesFrom(__DIR__.'/../../../routes/telegram.php');
     }
 }
