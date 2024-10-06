@@ -10,6 +10,6 @@ abstract class Bot
 
     public function send(): \Illuminate\Http\Client\Response
     {
-       return Http::post("https://api.telegram.org/bot".env('TELEGRAM_BOT_TOKEN')."/$this->method", $this->data);
+       return Http::post("https://api.telegram.org/bot".config('telegram.bot_token')."/$this->method", $this->data);
     }
 }

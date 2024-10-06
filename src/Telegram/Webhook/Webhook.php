@@ -2,7 +2,7 @@
 
 namespace andrewlevvv23\oxTechTelegram\Webhook;
 
-use App\Facades\Telegram;
+use andrewlevvv23\oxTechTelegram\Facades\Telegram;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -35,7 +35,7 @@ class Webhook
     public function run(): true|\Illuminate\Http\Client\Response
     {
         $chatId = $this->request->input('message.chat.id');
-        if(!$chatId || $chatId == env('TELEGRAM_IRC_CHAT')) {Log::error("Chat ID is missing in callback query: $chatId"); return true;}
+        if(!$chatId || $chatId == config('telegram.group_chat_id')) {Log::error("Chat ID is missing in callback query: $chatId"); return true;}
 
         $text = 'Unknown command, check the entered data✍️';
         return Telegram::message($chatId, $text)->send();

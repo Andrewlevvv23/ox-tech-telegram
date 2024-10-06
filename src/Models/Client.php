@@ -15,10 +15,6 @@ class Client extends Model
         'user_name',
         'first_name',
         'phone',
-        'language_code',
-        'path_image_qr_code',
-        'verification',
-        'path_image_verification'
     ];
 
 }

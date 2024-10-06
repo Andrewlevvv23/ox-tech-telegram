@@ -1,14 +1,9 @@
 <?php
 
-namespace App\Telegram\Webhook;
+namespace andrewlevvv23\oxTechTelegram\Webhook;
 
-use App\Facades\Telegram;
-use App\Telegram\Webhook\Commands\Authorization;
-use App\Telegram\Webhook\Commands\Lang;
-use App\Telegram\Webhook\Commands\LinkingQR;
-use App\Telegram\Webhook\Commands\Register;
-use App\Telegram\Webhook\Commands\Support;
-use App\Telegram\Webhook\Commands\Verification;
+use andrewlevvv23\oxTechTelegram\Facades\Telegram;
+use andrewlevvv23\oxTechTelegram\Webhook\Commands\Lang;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

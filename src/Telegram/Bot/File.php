@@ -84,10 +84,10 @@ class File extends Bot
      */
     public function send(): \Illuminate\Http\Client\Response
     {
-        if ($this->method === 'getFile') return Http::post('https://api.telegram.org/bot' . env('TELEGRAM_BOT_TOKEN') . '/' . $this->method, $this->data);
+        if ($this->method === 'getFile') return Http::post('https://api.telegram.org/bot' . config('telegram.bot_token') . '/' . $this->method, $this->data);
 
-        if (!empty($this->file)) return Http::attach($this->type, file_get_contents($this->file), basename($this->file))->post('https://api.telegram.org/bot' . env('TELEGRAM_BOT_TOKEN') . '/' . $this->method, $this->data);
+        if (!empty($this->file)) return Http::attach($this->type, file_get_contents($this->file), basename($this->file))->post('https://api.telegram.org/bot' . config('telegram.bot_token') . '/' . $this->method, $this->data);
 
-        return Http::post('https://api.telegram.org/bot' . env('TELEGRAM_BOT_TOKEN') . '/' . $this->method, $this->data);
+        return Http::post('https://api.telegram.org/bot' . config('telegram.bot_token') . '/' . $this->method, $this->data);
     }
 }
