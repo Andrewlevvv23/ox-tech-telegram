@@ -1,9 +1,8 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Webhook;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Webhook;
 
 use andrewlevvv23\oxTechTelegram\Facades\Telegram;
-use andrewlevvv23\oxTechTelegram\Webhook\Commands\Lang;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

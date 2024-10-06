@@ -35,7 +35,9 @@
                 "andrewlevvv23\\oxTechTelegram\\Providers\\AppServiceProvider"
             ],
             "aliases": {
-                "Telegram": "andrewlevvv23\\oxTechTelegram\\Facades\\Telegram"
+                "Telegram": "andrewlevvv23\\oxTechTelegram\\Facades\\Telegram",
+                "InlineButton": "andrewlevvv23\\oxTechTelegram\\Telegram\\Helpers\\InlineButton",
+                "KeyboardButton": "andrewlevvv23\\oxTechTelegram\\Telegram\\Helpers\\KeyboardButton"
             }
         }
     },

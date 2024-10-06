@@ -1,6 +1,6 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Helpers;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Helpers;
 
 class InlineButton
 {

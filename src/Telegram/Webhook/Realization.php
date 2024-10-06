@@ -1,6 +1,6 @@
 <?php
 
-namespace andrewlevvv23\oxTechTelegram\Webhook;
+namespace andrewlevvv23\oxTechTelegram\Telegram\Webhook;
 
 use Illuminate\Http\Request;
 
