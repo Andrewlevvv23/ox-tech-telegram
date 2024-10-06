@@ -1,5 +1,7 @@
 <?php
 
+use andrewlevvv23\oxTechTelegram\Telegram;
+
 return [
     /*
      * Telegram api base url, it can be overridden
@@ -19,7 +21,7 @@ return [
      */
     'webhook_url' => '/telegraph/{token}/webhook',
 
-    'bot_token' => '0000000000:AAEdIepawh_1NOTkkQFNNL0IBRL6xjla1qM',
+    'bot_token' => "0000000000:AAAAAAAAA_BBBBBBBBBB",
 
     'group_chat_id' => "-10000000000000",
 
@@ -32,13 +34,10 @@ return [
     /*
      * Set model class for both TelegraphBot and TelegraphChat,
      * to allow more customization.
-     *
-     * Bot model must be or extend `OXTelegram\Telegram\Models\Bot::class`
-     * Chat model must be or extend `OXTelegram\Telegram\Models\Chat::class`
      */
     'models' => [
-        'bot' => OXTechPHP\Telegram\Models\Bot::class,
-        'chat' => OXTechPHP\Telegram\Models\Chat::class,
+        'bot' => andrewlevvv23\oxTechTelegram\Models\Client::class,
+        'chat' => andrewlevvv23\oxTechTelegram\Models\User::class,
     ],
 
     'storage' => [

@@ -5,6 +5,7 @@ namespace andrewlevvv23\oxTechTelegram\Providers;
 use andrewlevvv23\oxTechTelegram\Facades\Telegram;
 use andrewlevvv23\oxTechTelegram\Telegram\Bot\Factory;
 use andrewlevvv23\oxTechTelegram\Webhook\Webhook;
+use andrewlevvv23\oxTechTelegram\Console\Commands\PublishConfigCommand;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,7 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //-
+        $this->commands([
+            PublishConfigCommand::class,
+        ]);
     }
 
     /**
@@ -30,5 +33,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(Webhook::class, function () use ($request) {
             return new Webhook($request, new Telegram());
         });
+
+        $this->publishes([
+            __DIR__ . '/../../config/telegram.php' => config_path('telegram.php'),
+        ], 'config');
     }
 }
